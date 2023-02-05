@@ -16,6 +16,7 @@ public class CalculatorTest {
         Double actualResult = calculator.add(firstNumber, secondNumber);
         //then
         assertEquals(expectedResult, actualResult);
+        assertNotNull(actualResult);
         assertNotEquals(unexpectedResult, actualResult, "the results supposed to be different");
     }
 
@@ -57,6 +58,7 @@ public class CalculatorTest {
         Double actualResult = calculator.multiply(firstNumber, secondNumber);
 
         assertEquals(expectedResult, actualResult);
+        assertNotNull(actualResult);
         assertNotEquals(5d, actualResult);
     }
 
@@ -69,6 +71,7 @@ public class CalculatorTest {
 
         Double actualResult = calculator.divide(firstNumber, secondNumber);
 
+        assertNotNull(actualResult);
         assertEquals(expectedResult, actualResult);
         assertNotEquals(4d, actualResult);
     }
